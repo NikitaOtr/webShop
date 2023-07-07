@@ -1,0 +1,101 @@
+@import './../../../style//Vars.scss';
+
+.detailOrder {
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    padding: 15px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 2px solid $colorGreenBright;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        cursor: default;
+    }
+
+    &__content {
+        height: calc(100% - 40px);
+        display: flex;
+        gap: 10px;
+
+        @media(max-width: 1420px) {
+            flex-direction: column;
+        }
+    }
+}
+
+.info {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media(max-width: 1420px) {
+        width: 100%;
+    }
+    
+    &__item {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__title {
+        cursor: default;
+        font-size: 18px;
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+
+    &__text {
+        cursor: default;
+        font-size: 18px;
+    }
+}
+
+.products {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: scroll;
+    border-radius: 15px;
+
+    @media(max-width: 1420px) {
+        width: 100%;
+    }
+
+     &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    &::-moz-scrollbar {
+        width: 0;
+        height: 0;
+        display: none;
+      }
+}
+
+.boxCross {
+    position: absolute;
+    width: 30px;
+    right: 10px;
+    cursor: pointer;
+
+    &__cross * {
+        stroke: black;
+    }
+    
+    &:hover {
+        .boxCross__cross * {
+            stroke: $colorGreenBright;
+        }
+    }
+}

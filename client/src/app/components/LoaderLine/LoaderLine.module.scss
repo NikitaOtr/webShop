@@ -1,0 +1,39 @@
+.skWave {
+    width: 4rem * 1.5;
+    height: 2rem;
+    margin: auto;
+    text-align: center;
+    font-size: 1em;  
+}
+.skWave .skRect {
+  background-color: #17d620;
+  height: 100%;
+  width: .5em;
+  margin-right: .2em;
+  display: inline-block;
+  animation: sk-wave-stretch-delay 1.2s infinite ease-in-out;
+}
+.skWave .skRect1 {
+  animation-delay: -1.6s;
+}
+.skWave .skRect2 {
+  animation-delay: -1.5s;
+}
+.skWave .skRect3 {
+  animation-delay: -1.4s;
+}
+.skWave .skRect4 {
+  animation-delay: -1.3s;
+}
+.skWave .skRect5 {
+  animation-delay: -1.2s;
+}
+
+@keyframes sk-wave-stretch-delay {
+    0%, 40%, 100% {
+      transform: scaleY(0.4);
+    }
+    20% {
+      transform: scaleY(1.0);
+    }
+}

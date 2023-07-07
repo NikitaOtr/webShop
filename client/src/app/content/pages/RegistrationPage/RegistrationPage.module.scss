@@ -1,0 +1,58 @@
+@import './../../../style/container.scss';
+@import './../../../style/Vars.scss';
+
+.container {
+    @extend .container;
+}
+
+.buttonBack {
+    height: 30px;
+    width: 150px;
+    font-size: 18px;
+    color: $colorBlack;
+}
+
+.formBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    max-width: 390px;
+    margin: 40px auto 40px;
+    padding: 20px ;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(75, 75, 75, .2);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    align-items: center;
+}
+
+.title {
+    cursor: default;
+}
+
+.button {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+}
+
+.active {
+    opacity: 1;
+}
+
+.inactive {
+    opacity: 0;
+}
+
+.error {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+}

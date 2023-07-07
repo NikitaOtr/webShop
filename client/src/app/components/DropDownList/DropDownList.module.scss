@@ -1,0 +1,75 @@
+@import './../../style/Vars.scss';
+
+.dropDownList {
+    border-radius: 10px;
+    position: relative;
+
+    &__content {
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+
+        border: 2px solid  $colorGreenBright;
+        border-radius: inherit;
+        background-color: white;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        z-index: 50;
+        
+        &__text {
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            user-select: none
+        }
+    
+        &__arrow {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s;
+    
+            &_active {
+                transform: rotate(180deg);
+            }
+    
+            &_inactive {
+                transform: rotate(270deg);
+            }
+        }
+    }
+
+    &__list {
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+        border-style: none solid solid solid;
+        border-width: 2px;
+        border-color: $colorGreenBright;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        &_active {
+            z-index: 51;
+            top: 78%;
+            max-height: 246px;
+            transition: max-height 0.3s;
+        }
+        
+        &_inactive {
+            z-index: 49;
+            top: 40%;
+            max-height: 0px;
+            transition: max-height 0.3s, top 0.1s 0.08s, z-index 0s 0.1s;
+        }
+    }
+}

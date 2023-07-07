@@ -1,0 +1,117 @@
+@import './../../../style/container.scss';
+@import './../../../style/Vars.scss';
+
+.userPage {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+    @extend .container;
+
+    &__boxTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    &__title {
+        cursor: default;
+    }
+
+    &__text {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 18px;
+        color: $colorBlack;
+
+        &:hover {
+            color: $colorGreenBright;
+        }
+    }
+}
+
+.commonLine {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+
+    @media (max-width: 998px) {
+        flex-direction: column;
+    }
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    border-radius: 15px;
+    padding: 15px;
+    gap: 15px;
+    background-color: inherit;
+    border: 3px solid $colorGreenBright;
+
+    &__boxTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__title {
+        cursor: default;
+        font-size: 24px;
+        font-weight: 600;
+        color: $colorBlack;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &_hover {
+            cursor: pointer;
+
+            &:hover {
+                color: $colorGreenBright;
+            }
+        }
+    }
+
+    &__text {
+        @media (max-width: 1350px) {
+            display: none;
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: 15px;
+
+        &__title {
+            cursor: default;
+            font-weight: 600;
+            font-size: 18px;
+            color: $colorBlack;
+        }
+
+        &__text {
+            cursor: default;
+            font-size: 18px;
+            color: $colorBlack;
+        }
+    }
+}
+
+.boxImg {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+    grid-auto-rows: 0px;
+    overflow: hidden;
+    column-gap: 10px;
+
+    &__img {
+        height: 80px;
+    }
+}

@@ -1,0 +1,29 @@
+@import './../../../style/container.scss';
+@import './../../../style//Vars.scss';
+
+.buttonBack {
+    height: 30px;
+    width: 150px;
+    font-size: 18px;
+    color: $colorBlack;
+}
+
+.ordersPage {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @extend .container;
+
+    &__title {
+        font-size: 28px;
+        cursor: default;
+    }
+
+    &__products {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        gap: 12px;
+    }
+}

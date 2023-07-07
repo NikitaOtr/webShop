@@ -1,0 +1,31 @@
+@import './../../style/Vars.scss';
+
+.alert {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 99;
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: $colorBlack;
+    font-size: 15px;
+    font-weight: 600;
+    border: 3px solid $colorGreenBright;
+    border-radius: 50px;
+    height: 40px;
+    width: 280px;
+    transition: transform .3s cubic-bezier(0, 2, .75, 1.32);
+}
+
+.active {
+    transform: translateY(300%);
+}
+
+.inactive {
+    transform: translateY(-100%);
+}
+

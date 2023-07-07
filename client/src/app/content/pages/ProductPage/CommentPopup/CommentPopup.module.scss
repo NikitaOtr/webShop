@@ -1,0 +1,115 @@
+@import './../../../../style//Vars.scss';
+
+.commentPopup {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: min-content;
+    padding: 15px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid $colorGreenBright;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        cursor: default;
+    }
+}
+
+.boxCross {
+    position: absolute;
+    width: 30px;
+    right: 10px;
+    cursor: pointer;
+
+    &__cross * {
+        stroke: black;
+    }
+    
+    &:hover {
+        .boxCross__cross * {
+            stroke: $colorGreenBright;
+        }
+    }
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &__date {
+        font-size: 16px;
+        cursor: default;
+    }
+}
+
+.commentData {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__title {
+        font-size: 20px;
+        font-weight: 600;
+        cursor: default;
+    }
+
+    &__stars {
+        width: min-content;
+        display: flex;
+        gap: 10px;
+    }
+
+    &__star {
+        cursor: default;
+        height: 35px;
+        width: 35px;
+
+        &_changeMode {
+            cursor: pointer;
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        height: 250px;
+        resize: none;
+        border-radius: 15px;
+        padding: 7px;
+        border: 2px solid $colorGreenBright;
+        font-size: 18px;
+        outline: 0;
+
+        &_error {
+            border: 2px solid red;
+        }
+    }
+
+    &__error {
+        font-size: 18px;
+        color: red;
+    }
+}
+
+.active {
+    opacity: 1;
+}
+
+.inactive {
+    opacity: 0;
+}
+
+.boxButtons {
+    display: flex;
+    gap: 20px;
+
+    &__button {
+        width: 100%;
+        height: 40px;
+    }
+}

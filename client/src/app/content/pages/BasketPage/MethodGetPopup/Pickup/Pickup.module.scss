@@ -1,0 +1,66 @@
+.pickup {
+    display: flex;
+    gap: 15px;
+    height: 100%;
+
+    @media(max-width: 998px) {
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 600;
+
+        @media(max-width: 998px) {
+            text-align: center;
+        }
+    };
+
+    &__info { 
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 25%;
+
+        @media(max-width: 998px) {
+            width: 100%;
+        }
+
+        &__buttonsBlock {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+    
+            @media(max-width: 998px) {
+                flex-direction: row;
+            }
+        }
+    }
+
+    &__map {
+        height: 100%;
+        width: 75%;
+
+        @media(max-width: 998px) {
+            width: 100%;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        height: 40px;
+
+        @media(max-width: 482px) {
+            height: 80px;
+        }
+
+        &_save {
+            margin-top: 20px;
+
+            @media(max-width: 998px) {
+                margin-top: 0px;
+            }   
+        }
+    }
+}

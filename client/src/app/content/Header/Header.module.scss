@@ -1,0 +1,95 @@
+@import './../../style/Vars.scss';
+@import './../../style/container.scss';
+
+.header {
+    height: 70px;
+    width: 100%;
+    background-color: $colorGreenDark;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+    @extend .container;
+}
+
+.boxTitle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: $colorWhite;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.burger {
+    width: 50px;
+    height: 40px;
+}
+
+.boxContent {
+    display: flex;
+    gap: 10px;
+}
+
+.basketLink {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &__text {
+        font-size: 12px;
+        font-weight: 600;
+        transition: all .5s;
+        color: $colorWhite;
+    }
+
+    &__basket {
+        height: 30px;
+        width: 30px;
+    }
+
+    &__basket * {
+        transition: all .5s;
+        fill: $colorWhite;
+    }
+
+    &__countProduct {
+        top: -5px;
+        left: -10px;
+        position: absolute;
+        background-color: inherit;
+        border-radius: 500px;
+        width: 15px;
+        height: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__count {
+            transition: all .5s;
+            color: $colorWhite;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    &:hover {
+        .basketLink__text {
+            color: $colorWhite;
+        }
+        .basketLink__basket * {
+            fill: $colorWhite;
+        }
+        .basketLink__countProduct__count {
+            color: $colorWhite;
+        }
+    }
+}

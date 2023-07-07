@@ -1,0 +1,49 @@
+.emptyStub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+        align-items: flex-start;
+        @media(max-width: 800px) {
+            gap: 20px;
+
+            .emptyStub__infoBlock {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.infoBlock {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    &__button {
+        font-size: 18px;
+        width: 280px;
+        height: 40px;
+        color: black;
+    }
+
+    &__text {
+        text-align: center;
+    }
+}
+
+.imageBlock {
+    width: 400px;
+    height: 400px;
+
+    @media(max-width: 420px) {
+        width: 240px;
+    }
+}

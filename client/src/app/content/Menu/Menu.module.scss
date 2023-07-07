@@ -1,0 +1,34 @@
+@import './../../style/Vars.scss';
+
+.wrapper {
+    position: fixed;
+    width: 100%;
+    height: 200vh;
+    z-index: 98;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.menu {
+    padding-top: 70px;
+    position: fixed;
+    width: 400px;
+    height: 100%;
+    background-color: $colorGreenDark;
+    transition: transform 0.3s;
+    z-index: 98;
+    @media (max-width: 500px) {
+        width: 100%;
+    } 
+}
+
+.active {
+    transform: translateX(0%);
+}
+
+.inactive { 
+    transform: translateX(-100%);
+}
+
+.bodyOverflowHidden {
+    overflow: hidden;
+}

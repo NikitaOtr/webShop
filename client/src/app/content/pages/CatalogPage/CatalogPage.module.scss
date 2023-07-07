@@ -1,0 +1,8 @@
+@import './../../../style/container.scss';
+
+.catalogPage {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @extend .container;
+}

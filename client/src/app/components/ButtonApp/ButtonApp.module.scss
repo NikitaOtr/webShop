@@ -1,0 +1,38 @@
+@import './../../style/Vars.scss';
+
+.button {
+    border-radius: 10px;
+    background-color: inherit;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid $colorGreenBright;
+    transition: background-color .5s, color .5s, transform .2s, box-shadow .3s;
+
+    &:disabled {
+        cursor: no-drop;
+        opacity: 0.5;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.notMayBeSelected {
+    &:hover {
+        background-color: $colorGreenBright;
+        color: $colorBlack;
+    }
+
+    @media(max-width: 998px) {
+        background-color: $colorGreenBright;
+        color: $colorBlack;
+    }
+}
+
+.selectedButton {
+    background-color: $colorGreenBright;
+    color: $colorBlack;
+}

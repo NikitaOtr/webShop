@@ -1,0 +1,43 @@
+.carousel {
+    padding: 0 30px;
+    position: relative;
+
+    &__scrollBox {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__scroll {
+        display: flex;
+        gap: 10px;
+        transition: margin-left .5s;
+    }
+
+    &__button {
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        top: calc(50% - 13px);
+        
+        &_left {
+            left: 0;
+        }
+
+        &_right {
+            right: 0;
+        }
+    }
+
+    &__img {
+        width: 15px;
+        height: 15px;
+
+        &_left {
+            transform: rotate(270deg);
+        }
+
+        &_right {
+            transform: rotate(90deg);
+        }
+    }
+}

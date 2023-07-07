@@ -1,0 +1,68 @@
+@import './../../style//Vars.scss';
+
+.boxLabel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.input {
+    padding: 0 32px 0 5px;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    outline: none;
+    border: 2px solid $colorGreenBright;
+
+    &_disabled {
+        padding: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border: none !important;
+        background: inherit;
+        cursor: default;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    &_error {
+        border: 2px solid red;
+    }
+
+    &_success {
+        border: 2px solid $colorGreenBright;
+    }
+}
+
+.errorMessage {
+    color: red;
+    text-align: center;
+}
+
+.successMessage {
+    color: $colorGreenBright;
+    text-align: center;
+}
+
+.active {
+    opacity: 1;
+}
+
+.inactive {
+    opacity: 0;
+}

@@ -1,0 +1,24 @@
+.bodyOverflowHidden {
+    overflow: hidden;
+}
+
+.wrapperPopup {
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 101;
+
+    &_common {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    &_warning {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}

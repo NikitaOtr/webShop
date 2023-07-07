@@ -1,0 +1,14 @@
+.checkBox {
+    padding: 5px;
+
+    &__label {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__input {
+        cursor: pointer;
+    }
+}

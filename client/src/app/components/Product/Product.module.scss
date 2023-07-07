@@ -1,0 +1,134 @@
+@import './../../style/Vars.scss';
+
+.product {
+    position: relative;
+    border-radius: 15px;
+    background-color: white;
+    border: 3px solid $colorGreenBright;
+    position: relative;
+
+    &__link {
+        padding: 8px 15px 0 15px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    &:hover {
+        .boxImg {
+            transform: scale(1.1);
+        }
+        .boxButton {
+            opacity: 1;
+        }
+        .wrap {
+            transform: scale(1) rotate(0deg);
+        }
+    }
+    
+}
+
+.wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all .3s;
+    transform: scale(0) rotate(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media(max-width: 998px) {
+        display: none;
+    }
+    
+    &__message {
+        background-color:  rgba(30, 215, 96, .6);
+        color: $colorBlack;
+        height: 40px;
+        width: 100px;
+    }
+}
+
+.boxImg {
+    width: 100%;
+    padding-bottom: 60%;
+    position: relative;
+    transition: transform .5s;
+    &__img {
+        border-radius: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    @media(max-width: 998px) {
+        transform: scale(1) !important;
+    }
+}
+
+.boxText {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+
+    &__title {
+        font-size: 18px;
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__text {
+        font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.boxButton {
+    width: 100%;
+    opacity: 0;
+    padding: 5px 10px;
+    transition: opacity .5s;
+
+    &__button {
+        width: 100%;
+        height: 40px;
+        font-size: 18px;
+        font-weight: 600;
+        color: $colorBlack;
+    }
+    @media(max-width: 998px) {
+        opacity: 1;
+    }
+}
+
+.boxActions {
+    z-index: 1;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 0 15px 0 0;
+
+    &__item {
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+        stroke: $colorGreenDark;
+        fill: $colorGreenDark;
+
+        &:hover {
+            fill: $colorGreenBright;
+            stroke: $colorGreenBright;
+        }
+    }
+}

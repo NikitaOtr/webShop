@@ -1,0 +1,39 @@
+@import-normalize;
+@import './style/scrollbar.scss';
+@import './style/Vars.scss';
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: $colorBlack;
+    margin: 0;
+}
+html,
+body {
+    height: 100vh;
+}
+
+.root {
+    height: 100vh;
+}
+
+.rootDiv {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.main {
+    min-height: 90vh;
+    flex: 1 1 auto;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}

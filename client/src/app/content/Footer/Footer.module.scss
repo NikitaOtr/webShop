@@ -1,0 +1,54 @@
+@import './../../style/container.scss';
+@import './../../style/Vars.scss';
+
+.footer {
+    background-color: $colorGreenDark;
+    padding-top: 50px;
+    @extend .container;
+}
+
+.boxList {
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    &__title {
+        cursor: default;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__text {
+        cursor: pointer;
+        color: $colorGrey;
+        font-size: 18px;
+        &:hover {
+            color: $colorWhite;
+        }
+        @media(max-width: 998px) {
+            color: $colorWhite;
+        }
+    }
+}
+
+.copyRights {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__text {
+        text-align: center;
+        font-weight: 500;
+        font-size: 18px;
+        cursor: default;
+        color: $colorGrey;
+    }
+}

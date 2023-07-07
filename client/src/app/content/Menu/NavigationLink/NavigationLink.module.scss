@@ -1,0 +1,47 @@
+@import './../../../style/Vars.scss';
+
+.containerLink {
+    border-radius: 15px;
+    display: flex;
+    transition: all .3s;
+
+    &_selected {
+        background-color: rgba(60, 255, 60, 0.3);
+    }
+
+    &:hover {
+        background-color: $colorGreenBright;
+        border-radius: 15px;
+
+    }
+
+    @media(max-width: 998px) {
+        &:hover {
+            background-color: inherit;
+        }
+    }
+}
+
+.link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 35px;
+    z-index: 50;
+    height: 40px;
+    @media(max-width: 500px) {
+        justify-content: center;
+    }
+}
+
+.img {
+    height: 25px;
+    width: 25px;
+}
+
+.text {
+    color: $colorWhite;
+    font-size: 18px;
+    font-weight: 600;
+}

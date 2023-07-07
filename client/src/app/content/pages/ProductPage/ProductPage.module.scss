@@ -1,0 +1,222 @@
+@import './../../../style/container.scss';
+@import './../../../style/Vars.scss';
+
+.productPage {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    @extend .container;
+    padding-bottom: 50px;
+}
+
+.buttonBack {
+    height: 30px;
+    width: 150px;
+    font-size: 18px;
+    color: $colorBlack;
+}
+
+.header {
+    font-size: 38px;
+    margin: 0;
+    cursor: default;
+}
+
+.content {
+    display: flex;
+    gap: 15px;
+    @media(max-width: 998px) {
+        flex-direction: column;
+        gap: 10px
+    }
+
+}
+
+.counterBlock {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.leftContent {
+    width: 56.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @media(max-width: 998px) {
+        width: 100%;
+    }
+
+    &__mainImg {
+        border-radius: 15px;
+        border: 3px solid $colorGreenBright;
+    }
+
+    &__boxActions {
+        border: 3px solid $colorGreenBright;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 15px;
+        padding: 15px;
+
+        &__actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        &__actionItem {
+            height: 40px;
+            width: 40px;
+            stroke: $colorGreenDark;
+            fill: $colorGreenDark;
+            cursor: pointer;
+
+            &:hover {
+                    fill: $colorGreenBright;
+                    stroke: $colorGreenBright;
+            }
+        }
+
+        &__rating {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            &__box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+
+        &__ratingItem {
+            height: 30px;
+            width: 30px;
+            stroke: $colorGreenDark;
+            fill: $colorGreenDark;
+            cursor: pointer;
+        }
+
+        &__text {
+            cursor: default;
+            font-size: 16px;
+            margin-left: 5px;
+        }
+    }
+}
+
+.boxImg {
+    width: 100%;
+    padding-bottom: 60%;
+    position: relative;
+
+    &__img {
+        cursor: zoom-in;
+        border-radius: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.boxData {
+    border-radius: 15px;
+    padding: 15px;
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: inherit;
+    border: 3px solid $colorGreenBright;
+    @media (max-width: 998px) {
+        width: 100%;
+    }
+}
+
+.data {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    &__title {
+        cursor: default;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__text {
+        cursor: default;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    &__prise {
+        display: inline-block;
+        width: 200px;
+
+        &_size {
+            height: 45px;
+        }
+    }
+
+}
+
+.boxServerCount {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    font-size: 22px;
+    height: 50px;
+    width: 100%;
+}
+
+.boxDescription {
+    background-color: inherit;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 3px solid $colorGreenBright;
+
+    &__title {
+        cursor: default;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__description {
+         cursor: default;
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+
+.comments {
+    border-radius: 15px;
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: inherit;
+    border: 3px solid $colorGreenBright;
+
+    &__title {
+        cursor: default;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+
+.reviewButton {
+    height: 40px;
+    font-size: 20px;
+}

@@ -1,0 +1,109 @@
+@import './../../../style/container.scss';
+@import './../../../style/Vars.scss';
+
+.backgroundImg {
+    position: relative;
+    height: calc(100vh - 70px);
+    background-color: rgba(0, 60, 0);
+    background-image: url('https://images.unsplash.com/photo-1506316940527-4d1c138978a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 1;
+    
+    &:after {
+        content: '';
+        height: calc(100vh - 70px);
+        background-color: rgba(0, 0, 0, .5);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+}
+
+.salutation {
+    z-index: 3;
+    width: 50%;
+    height: 80%;
+    padding-top: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    @extend .container;
+    @media(max-width: 998px) {
+        width: 100%;
+    }
+    &__headLine {
+        font-weight: 600;
+        font-size: 55px;
+        margin: 0;
+        color: white;
+        cursor: default;
+    }
+
+    &__link {
+        height: 60px;
+        width: 200px;
+        font-size: 18px;
+        color: $colorWhite;
+    }
+
+    &__text {
+        font-size: 35px;
+        color: white;
+        text-align: center;
+        margin: 0;
+        cursor: default;
+    }
+}
+
+.arrowBlock {
+    margin: 0 auto;
+    z-index: 3;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    &__text {
+        text-align: center;
+        color: $colorWhite;
+        font-size: 18px;
+        cursor: default;
+    }
+
+    &__button {
+        background: none;
+        border: none;
+
+        &__cross * {
+            fill: $colorWhite;
+        }
+
+        &:hover {
+            .arrowBlock__button__cross * {
+                fill: $colorGreenBright;
+            }
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    @extend .container;
+}

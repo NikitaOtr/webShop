@@ -1,0 +1,22 @@
+@import './../../style/Vars.scss';
+
+.buttonScrollUp {
+    height: 45px;
+    width: 45px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 100px !important;
+
+    &__active {
+        transition: opacity 0.3s;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    &__inactive {
+        transition: opacity 0.3s, z-index 0.3s;
+        opacity: 0;
+        z-index: -2;
+    }
+}
